@@ -30,3 +30,11 @@ print(my_list[3])
 print(my_list[4])
 print(my_list[4][0])
 print(my_list[3][1])
+
+
+sliced = my_list[1:3]
+print(sliced)
+
+slice_me = 'ip address'
+sliced = slice_me[:2]
+print(sliced)
