@@ -14,4 +14,6 @@ interface_name = connection.send_command('show run int eth0/0')
 print(interface_name)
 
 interface_description = connection.send_command('show run int eth0/0 | i ^ des')
+if not interface_description:
+    interface_description = 'N/A'
 print(interface_description)
