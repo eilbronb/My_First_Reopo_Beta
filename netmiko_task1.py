@@ -25,4 +25,6 @@ create_loopback = connection.send_config_set(Config1)
 print(create_loopback)
 
 verification = connection.send_command('show ip interface brief | include Loopback')
+if verification count('up') == 2:
+    print('It looks like Loopback0 is "up/up"! Way to go!')
 print(verification)
