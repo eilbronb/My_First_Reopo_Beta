@@ -9,3 +9,5 @@ connection = ConnectHandler(**cisco_gns3)
 
 hostname = connection.find_prompt()
 print(hostname[:-1])
+
+interface_name = connection.send_command('show run int eth0/0')
