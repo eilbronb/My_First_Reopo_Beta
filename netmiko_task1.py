@@ -20,11 +20,13 @@ print(interface_description)
 
 Config1 =['interface loopback0', 'ip address 100.100.100.100 255.255.255.255']
 
-connection.config_mode()
-create_loopback = connection.send_config_set(Config1)
-print(create_loopback)
+#connection.config_mode()
+#create_loopback = connection.send_config_set(Config1)
+#print(create_loopback)
 
 verification = connection.send_command('show ip interface brief | include Loopback')
 if verification.count('up') == 2:
     print('It looks like Loopback0 is "up/up"! Way to go!')
+else:
+    print('It looks like something went wrong, let\'s get out before we break something!')
 print(verification)
