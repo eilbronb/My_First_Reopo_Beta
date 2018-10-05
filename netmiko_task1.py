@@ -7,5 +7,5 @@ cisco_gns3 = {'device_type':'cisco_ios',
 
 connection = ConnectHandler(**cisco_gns3)
 
-print(connection)
-print(type(connection))
+hostname = connection.find_prompt()
+print(hostname)
