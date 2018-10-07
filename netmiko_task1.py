@@ -33,11 +33,11 @@ print(verification)
 
 print('Moving on to Eth0/0, Eth0/1, Eth0/2 ')
 Config2 =['interface eth0/1','switchport',
-         'des To R1', 'switchport mode access' 'switchport access vlan 10',
+         'des To R1', 'switchport mode access' , 'switchport access vlan 10',
          'no shut', 'interface eth0/0','switchport',
-         'des To IOU-L3', 'switchport mode access' 'switchport access vlan 10',
+         'des To IOU-L3', 'switchport mode access', 'switchport access vlan 10',
          'no shut', 'interface eth0/2','switchport',
-         'des To IOU2', 'switchport mode access' 'switchport access vlan 10',
+         'des To IOU2', 'switchport mode access' , 'switchport access vlan 10',
          'exit']
 connection.send_config_set(Config2)
 
