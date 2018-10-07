@@ -5,3 +5,6 @@ Did Lists
 --------->Next is configuring Netmiko on page 107, already created a "netmiko_task1.py" file
 
 ------------>Next is page 115, configure interface
+
+--------------> Next is page 135, validate success. For this I'd like to configure OSPF on all routers
+and ping them, to validate success
