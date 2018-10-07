@@ -59,3 +59,7 @@ if output0.count('up') == 2:
 else:
     print('It looks like Something went wrong, let\'s exit before we break something')
     sys.exit()
+
+Config3 = ['router ospf 1', 'network 10.10.20.0 area 0', 'network 10.10.10.0 area 0' 'exit']
+
+connection.send_config_set(Config3)
