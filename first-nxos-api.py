@@ -40,7 +40,12 @@ https_payload = json.dumps(reqList)
 resp = requests.post(url, data=https_payload, headers=https_header, auth=('admin' , 'password123'))
 json_resp = resp.json()
 
+
+
+#Creating another call for the show command
 http_resp = json.dumps(showItem1)
 resp1 = requests.post(url, data=http_resp, headers=https_header ,  auth=('admin' , 'password123'))
 json_resp1 = resp1.json()
+
+#creating a map to get to Data
 print(json_resp1["result"]["body"]["TABLE_intf"][0]["ROW_intf"])
