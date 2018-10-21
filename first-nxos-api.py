@@ -42,5 +42,5 @@ json_resp = resp.json()
 
 http_resp = json.dumps(showItem1)
 resp1 = requests.get(url, data=http_resp, headers=https_header ,  auth=('admin' , 'password123'))
-json_resp1 = resp1.json()
-print(json_resp1)
+#json_resp1 = resp1.json()
+print(resp1)
