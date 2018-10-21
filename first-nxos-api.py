@@ -29,6 +29,18 @@ reqItem3 = {
 }
 reqList.append(reqItem3)
 
+showItem1 = {
+    "jsonrpc":"2.0",
+    "method":"cli",
+    "params": {"cmd":"show ip interface brief", "version": 1},
+    "id": 1
+}
+
 https_payload = json.dumps(reqList)
 resp = requests.post(url, data=https_payload, headers=https_header, auth=('admin' , 'password123'))
 json_resp = resp.json()
+
+http_resp = json.dumps(showItem1)
+resp1 = requests.get(url, data=http_resp, headers=https_header ,  auth=('admin' , 'password123'))
+json_resp1 = resp1.json()
+print(json_resp1)
