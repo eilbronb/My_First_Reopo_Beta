@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = 'https://10.10.10.25/ins'
+url = 'http://10.10.10.25/ins'
 https_header = {'content-type':'application/json-rpc'}
 
 reqList = []
