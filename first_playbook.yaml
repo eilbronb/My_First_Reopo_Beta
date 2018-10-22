@@ -1,0 +1,11 @@
+
+---
+- name: Fact Finder
+  host: Nexus
+  task:
+    - name: Register Ansible Facts
+      setup:
+      register: ansible_facts
+    -name: Print Ansible Facts
+     debug:
+       msg: "{{ ansible_facts }}"
