@@ -7,5 +7,5 @@
       setup:
       register: ansible_facts
     - name: Print Ansible Facts
-     debug:
+      debug:
        msg: "{{ ansible_facts }}"
