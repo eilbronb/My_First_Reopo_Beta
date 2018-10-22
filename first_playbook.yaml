@@ -2,9 +2,9 @@
   - name: Fact Finder
     hosts: nexus
     tasks:
-  - name: Register Ansible Facts
-    setup:
-    register: ansible_facts
-  - name: Print Facts
-    debug:
-      msg: "{{ ansible_facts }}"
+      - name: Register Ansible Facts
+        setup:
+        register: ansible_facts
+      - name: Print Facts
+        debug:
+          msg: "{{ ansible_facts }}"
