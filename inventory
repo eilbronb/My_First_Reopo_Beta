@@ -1,6 +1,5 @@
 [all:vars]
 ansible_connection=local
-subnet_mask=255.255.255.0
 
 [nexus]
 9K-1a = ansible_host=10.10.10.25
