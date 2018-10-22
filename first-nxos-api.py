@@ -2,7 +2,7 @@ import requests
 import json
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
-requests.packages.urllib3.disbale_warnnings(InsecureRequestWarning)
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 url = 'https://10.10.10.25/ins'
 https_header = {'content-type':'application/json-rpc'}
