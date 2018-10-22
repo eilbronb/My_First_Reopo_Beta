@@ -63,4 +63,4 @@ json_resp1 = resp1.json()
 
 
 #creating a map to get to Data
-print(json_resp1["result"]["body"]["TABLE_intf"])
+print(json_resp1)
