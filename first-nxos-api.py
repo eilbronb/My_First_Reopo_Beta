@@ -1,5 +1,6 @@
 import requests
 import json
+from requests.packages.urllib3.exceptions import InsecureRequestsWarning
 
 url = 'https://10.10.10.25/ins'
 https_header = {'content-type':'application/json-rpc'}
@@ -48,4 +49,4 @@ resp1 = requests.post(url, data=http_resp, headers=https_header ,  auth=('admin'
 json_resp1 = resp1.json()
 
 #creating a map to get to Data
-print(json_resp1["result"]["body"]["TABLE_intf"][0]["ROW_intf"])
+print(json_resp1["result"]["body"]["TABLE_intf"])
