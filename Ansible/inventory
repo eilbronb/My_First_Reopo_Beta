@@ -1,9 +1,0 @@
-[all:vars]
-ansible_connection=local
-
-[nexus]
-9K-1a = ansible_host=10.10.10.25
-
-[nexus:vars]
-username:admin
-password:password123
