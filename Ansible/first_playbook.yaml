@@ -1,7 +1,7 @@
 ---
   - name: Fact Finder
     gather_facts: no
-    hosts: nexus
+    hosts: ios
     tasks:
       - name: Register Ansible Facts
         setup:
