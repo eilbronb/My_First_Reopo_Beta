@@ -10,5 +10,11 @@
         debug:
           msg: "{{ ansible_facts }}"
       - name: Gather IOS Facts
+        vars:
+          credentials:
+            host: "{{ ansible_host }}"
+            username: "{{ admin }}"
+            password: "{{ password123 }}"
         ios_facts:
+          provider: "{{ credentials }}"
         register: ios_facts_output
