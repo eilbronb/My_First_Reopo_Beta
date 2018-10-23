@@ -11,8 +11,8 @@ password:password123
 
 [ios]
 R1 = ansible_host=10.10.10.22
+IOU-L3 = ansible_host=10.10.10.21
 
 [ios:vars]
 username:admin
 password:password123
-

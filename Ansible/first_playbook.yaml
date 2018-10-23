@@ -1,5 +1,6 @@
 ---
   - name: Fact Finder
+    gather_facts: no
     hosts: nexus
     tasks:
       - name: Register Ansible Facts
@@ -8,3 +9,6 @@
       - name: Print Facts
         debug:
           msg: "{{ ansible_facts }}"
+      - name: Gather IOS Facts
+        ios_facts:
+        register: ios_facts_output
