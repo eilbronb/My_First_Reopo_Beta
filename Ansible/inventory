@@ -7,3 +7,4 @@ ansible_connection=local
 [nexus:vars]
 username:admin
 password:password123
+
