@@ -1,18 +1,13 @@
 [all:vars]
 ansible_connection=local
+username=admin
+password=password123
 
 [nexus]
 9K-1a = ansible_host=10.10.10.25
 
-[nexus:vars]
-username:admin
-password:password123
-
-
 [ios]
-R1 = ansible_host=10.10.10.22
-IOU-L3 = ansible_host=10.10.10.21
+IOU-L3  ansible_host=10.10.10.21
 
-[ios:vars]
-username:admin
-password:password123
+[cisco:children]
+ios

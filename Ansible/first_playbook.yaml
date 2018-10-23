@@ -13,8 +13,8 @@
         vars:
           credentials:
             host: "{{ ansible_host }}"
-            username: "{{ admin }}"
-            password: "{{ password123 }}"
+            username: "{{ username }}"
+            password: "{{ password }}"
         ios_facts:
           provider: "{{ credentials }}"
         register: ios_facts_output
