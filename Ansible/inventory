@@ -8,3 +8,11 @@ ansible_connection=local
 username:admin
 password:password123
 
+
+[ios]
+R1 = ansible_host=10.10.10.22
+
+[ios:vars]
+username:admin
+password:password123
+
