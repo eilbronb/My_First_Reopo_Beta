@@ -1,0 +1,18 @@
+[all:vars]
+ansible_connection=local
+
+[nexus]
+9K-1a = ansible_host=10.10.10.25
+
+[nexus:vars]
+username:admin
+password:password123
+
+
+[ios]
+R1 = ansible_host=10.10.10.22
+
+[ios:vars]
+username:admin
+password:password123
+
