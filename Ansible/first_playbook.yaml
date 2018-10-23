@@ -12,7 +12,7 @@
       - name: Gather IOS Facts
         vars:
           credentials:
-            host: "{{ ansible_host }}"
+            host: "{{ R1 }}"
             username: "{{ admin }}"
             password: "{{ password123 }}"
         ios_facts:
