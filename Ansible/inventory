@@ -7,7 +7,7 @@ password=password123
 9K-1a = ansible_host=10.10.10.25
 
 [ios]
-IOU-L3  ansible_host=10.10.10.22
+IOU-L3  ansible_host=10.10.10.21
 
 [cisco:children]
 ios
