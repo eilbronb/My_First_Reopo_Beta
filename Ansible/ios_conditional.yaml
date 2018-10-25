@@ -20,6 +20,6 @@
           msg: "SN: {{ ansible_net_serialnum }}, Version: {{ ansible_net_version }}"
       - name: Only Print Hostname When Serial Number Matches
         debug:
-          msg: "SN: {{ ansible_net_serialnum }}, Version: {{ ansible_net_version }}"
+          msg: "SN: {{ ansible_net_hostname }}, Version: {{ ansible_net_version }}"
         when:
           "'2048004' == ansible_net_serialnum"
