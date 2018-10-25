@@ -17,4 +17,4 @@
           msg: "{{ ios_facts_output }}"
       - name: Print IOS Serial Number and Version
         debug:
-          msg: "SN: {{ ansible_net_serialnum }}, Version: {{ ansible_net_vesrion }}"
+          msg: "SN: {{ ansible_net_serialnum }}, Version: {{ ansible_net_version }}"
