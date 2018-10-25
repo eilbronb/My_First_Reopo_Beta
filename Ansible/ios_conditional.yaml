@@ -22,4 +22,5 @@
         debug:
           msg: "Hostname: {{ ansible_net_hostname }}, Version: {{ ansible_net_version }}"
         when:
-          "'2048005' == ansible_net_serialnum"
+          - "'2048005' == ansible_net_serialnum"
+          - "'15.5' in ansible_net_version"
