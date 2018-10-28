@@ -13,3 +13,4 @@ IOU-R2  ansible_host=10.10.10.27
 
 [cisco:children]
 ios
+nexus
