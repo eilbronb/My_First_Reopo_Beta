@@ -1,0 +1,29 @@
+---
+  - name: The Before Argument
+    gather_facts: no
+    hosts: ios
+    vars:
+      credentials:
+        host: "{{ ansible_host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+    tasks:
+      - name: Build ne an ACL!
+        ios_config:
+          provider: "{{ credentials }}"
+          lines:
+            - permit ip host 1.1.1.1 host 8.8.8.8 log
+            - permit ip host 6.6.6.6 host 7.7.7.7 log
+            - permit ip host 8.8.8.8 host 1.1.1.1 log
+            - permit ip host 2.2.2.2 host 8.8.8.8 log
+            - permit ip host 7.7.7.7 host 6.6.6.6 log
+          parents: ip access-list extended AnsibleACL
+          match: exact
+          before: no ip access-list extended AnsibleACL
+        notify: "Save your work!"
+
+    handlers:
+      - name: Save your work!
+        ios_command:
+          provider: "{{ credentials }}"
+          command: "wr"
