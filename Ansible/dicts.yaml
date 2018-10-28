@@ -12,7 +12,9 @@
         ios_facts:
           provider: "{{ credentials }}"
         register: ios_facts_output
-      - name: Print Dict Item
+      - name: Print Dict Item, interfaces and their MTU
         debug:
-          msg: "{{ item.key }}"
+          msg: "{{ item.key }} , {{ item.value.mtu}}"
         with_dict: "{{ ansible_net_interfaces }}"
+        when:
+          - "'Loopback1' in ansible_net_interface"
