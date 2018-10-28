@@ -9,7 +9,7 @@
           password: "{{ password }}"
     tasks:
       - name: Gimme the routes!
-        ios_commands:
+        ios_command:
           provider: "{{ credentials }}"
           commands: show ip route
         register: output0
