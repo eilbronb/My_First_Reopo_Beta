@@ -11,9 +11,6 @@
       - name: Gimme the routes!
         ios_command:
           provider: "{{ credentials }}"
-          commands: show ip route
-        register: output0
-      - name: Print Output
-        debug:
-          msg: "{{ item.key }}"
-        with_dict: "{{ output0 }}"
+          commands:
+            - show version
+            - show interfaces
