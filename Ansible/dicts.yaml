@@ -17,7 +17,7 @@
           msg: "{{ ansible_net_interfaces }}"
       - name: Print Dict Item, interfaces and their MTU
         debug:
-          msg: "{{ item.key }} , {{ item.value.ipv4[0][address]}}"
+          msg: "{{ item.key }} , {{ item.value.ipv4[0].address}}"
         when:
           - "'Loopback' in item.key"
         with_dict: "{{ ansible_net_interfaces }}"
