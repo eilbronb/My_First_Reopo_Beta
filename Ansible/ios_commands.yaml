@@ -15,4 +15,5 @@
         register: output0
       - name: Print Output
         debug:
-          msg: "{{ output0 }}"
+          msg: "{{ item }}"
+        with_dict: "{{ output0 }}"
