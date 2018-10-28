@@ -11,13 +11,8 @@
       - name: Gimme the routes!
         ios_command:
           provider: "{{ credentials }}"
-          commands:
-            - show version
-            - show interfaces
-          wait_for:
-            - result[0] contains IOS
-        register: show_ver
-      - name: Print
+          commands: show ip route
+        register: output0
+      - name: Print 
         debug:
-          msg: "{{ show_ver }}"
-            #- result[1] contains Loopback
+          msg: "{{ output0 }}"
