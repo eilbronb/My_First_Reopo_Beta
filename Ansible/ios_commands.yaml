@@ -15,5 +15,5 @@
         register: output0
       - name: Print
         debug:
-          msg: "{{ item.value }}"
+          msg: "{{ item.value[0][0] }}"
         with_dict: "{{ output0 }}"
