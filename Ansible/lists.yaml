@@ -12,6 +12,7 @@
         ios_facts:
           provider: "{{ credentials }}"
         register: ios_facts_output
-      - name: Print IOS Facts
+      - name: Print List Items
         debug:
-          msg: "{{ ansible_net_all_ipv4_addresses }}"
+          msg: "{{ item }}"
+        with_items: "{{ ansible_net_all_ipv4_addresses }}"
