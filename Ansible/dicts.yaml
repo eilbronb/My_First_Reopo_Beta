@@ -15,4 +15,4 @@
       - name: Print Dict Item
         debug:
           msg: "{{ item.key }}"
-          with_dict: "{{ ansible_net_interfaces }}"
+        with_dict: "{{ ansible_net_interfaces }}"
