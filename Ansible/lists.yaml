@@ -14,4 +14,4 @@
         register: ios_facts_output
       - name: Print IOS Facts
         debug:
-          msg: "{{ ios_facts_output }}"
+          msg: "{{ ansible_net_all_ipv4_addresses }}"
