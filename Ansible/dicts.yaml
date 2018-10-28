@@ -19,5 +19,5 @@
         debug:
           msg: "{{ item.key }} , {{ item.value.mtu}}"
         when:
-          - "'Loopback1' in ansible_net_interface"
+          - "'Loopback1' in item.key"
         with_dict: "{{ ansible_net_interfaces }}"
