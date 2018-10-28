@@ -12,9 +12,6 @@
         ios_facts:
           provider: "{{ credentials }}"
         register: ios_facts_output
-      - name: print interfaces
-        debug:
-          msg: "{{ ansible_net_interfaces }}"
       - name: Print Dict Item, Print Loopback and their IP addresses
         debug:
           msg: "{{ item.key }} , {{ item.value.ipv4[0].address}}"
