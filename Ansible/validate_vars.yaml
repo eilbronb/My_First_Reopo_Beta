@@ -1,0 +1,11 @@
+---
+  - name: Validate vars
+    gather_facts: no
+    hosts: ios
+    tasks:
+      - name: Print Group vars
+        debug:
+          msg: "{{ ntp1 }}"
+      - name: Print Host vars
+        debug:
+          msg: "{{ timezone }}"
