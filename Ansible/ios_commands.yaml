@@ -9,7 +9,6 @@
           password: "{{ password }}"
     tasks:
       - name: Gimme the routes!
-        gather_facts: no
         ios_command:
           provider: "{{ credentials }}"
           commands: show ip route
