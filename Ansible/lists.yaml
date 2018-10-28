@@ -2,7 +2,7 @@
   - name: Dealing with Lists
     gather_facts: no
     hosts: ios
-    takss:
+    tasks:
       - name: Gather IOS Facts
         vars:
           credentials:
