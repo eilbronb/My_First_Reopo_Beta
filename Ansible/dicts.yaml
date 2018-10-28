@@ -14,5 +14,5 @@
         register: ios_facts_output
       - name: Print Dict Item
         debug:
-          msg: "{{ item }}"
+          msg: "{{ item.key }}"
           with_dict: "{{ ansible_net_interfaces }}"
