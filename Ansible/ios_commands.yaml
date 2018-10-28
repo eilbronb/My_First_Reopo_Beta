@@ -18,5 +18,5 @@
             - result[0] contains IOS
         register: show_ver
         debug:
-          msh: "{{ show_ver }}"
+          msg: "{{ show_ver }}"
             #- result[1] contains Loopback
