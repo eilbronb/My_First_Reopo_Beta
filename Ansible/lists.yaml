@@ -2,7 +2,7 @@
   - name: Dealing with Lists
     gather_facts: no
     hosts: ios
-    takss:
+    tasks:
       - name: Gather IOS Facts
         vars:
           credentials:
@@ -14,4 +14,4 @@
         register: ios_facts_output
       - name: Print IOS Facts
         debug:
-          msg: "{{ ios_facts_output }}"
+          msg: "{{ ansible_net_all_ipv4_addresses }}"
