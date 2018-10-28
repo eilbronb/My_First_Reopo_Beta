@@ -16,4 +16,4 @@
       - name: Print
         debug:
           msg: "{{ item }}"
-        with_items: "{{ Codes }}"
+        with_items: "{{ stdout_lines }}"
