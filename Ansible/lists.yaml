@@ -1,0 +1,17 @@
+---
+  - name: Dealing with Lists
+    gather_facts: no
+    hosts: ios
+    takss:
+      - name: Gather IOS Facts
+        vars:
+          credentials:
+            username: "{{ username }}"
+            password: "{{ password }}"
+            host: "{{ ansible_host }}"
+        ios_facts:
+          provider: "{{ credentials }}"
+        register: ios_facts_output
+      - name: Print IOS Facts
+        debug:
+          msg: "{{ ios_facts_output }}"
