@@ -13,6 +13,7 @@
           provider: "{{ credentials }}"
           commands: show ip route
         register: output0
-      - name: Print 
+      - name: Print
         debug:
-          msg: "{{ output0 }}"
+          msg: "{{ item }}"
+        with_items: "{{ Codes }}"
