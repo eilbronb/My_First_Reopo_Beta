@@ -26,4 +26,4 @@
       - name: Save your work!
         ios_command:
           provider: "{{ credentials }}"
-          command: "wr"
+          commands: "wr"
