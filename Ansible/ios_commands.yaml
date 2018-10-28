@@ -17,6 +17,7 @@
           wait_for:
             - result[0] contains IOS
         register: show_ver
+      - name: Print
         debug:
           msg: "{{ show_ver }}"
             #- result[1] contains Loopback
