@@ -14,3 +14,6 @@
           commands:
             - show version
             - show interfaces
+          wait_for:
+            - result[0] contains IOS
+            - results[1] contains Loopback
