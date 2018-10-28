@@ -1,7 +1,7 @@
 ---
   - name: Practicing IOS Show Commands
     gather_facts: no
-    hosts: csr
+    hosts: ios
     vars:
       credentials:
           host: "{{ ansible_host }}"
