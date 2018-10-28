@@ -1,0 +1,15 @@
+---
+  - name: Configuration Time!
+    gather_facts: no
+    hosts: ios
+    vars:
+      credentials:
+        username: "{{ username }}"
+        password: "{{ password }}"
+        host: "{{ ansible_host }}"
+    tasks:
+      - name: Starting Small
+        ios_config:
+          provider: "{{ credentials }}"
+          lines: description Yay Ansible!
+          parents: interface eth0/1
