@@ -9,11 +9,11 @@
           password: "{{ password }}"
     tasks:
       - name: Gimme the routes!
+        gather_facts: no
         ios_command:
           provider: "{{ credentials }}"
           commands: show ip route
         register: output0
       - name: Print
         debug:
-          msg: "{{ item }}"
-        with_items: "{{ stdout_lines }}"
+          msg: "{{ output0 }}"
