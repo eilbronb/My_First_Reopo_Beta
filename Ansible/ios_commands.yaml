@@ -16,4 +16,4 @@
       - name: Print
         debug:
           msg: "{{ item.stdout_lines }}"
-        with_dict: "{{ stdout_lines }}"
+        with_dict: "{{ item }}"
