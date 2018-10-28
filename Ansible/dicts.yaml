@@ -16,7 +16,7 @@
         debug:
           #msg: "{{ item.key }} , {{ item.value.ipv4[0].address}}"
           #msg: "{{ item}}
-          msg: "{{ item }}"
+          msg: "{{ ios_facts_output }}"
           # .key is a name that refers to interface names. .value.ipv4 are also keys
           # refere to a list inside a dictionary, the list itself has a single item [0] and its a dictionary, and you can call the "address" key
           # inside that dictionary to call the IP address, here is the full dictionary for ansible_net_interfaces
@@ -26,4 +26,4 @@
 
         # when:
         #   - "'Loopback' in item.key"
-         with_dict: "{{ ansible_net_interfaces }}"
+         #with_dict: "{{ ansible_net_interfaces }}"
