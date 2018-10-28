@@ -12,4 +12,4 @@
         ios_config:
           provider: "{{ credentials }}"
           lines: description Yay Ansible!
-          parents: interface Etherbet0/1
+          parents: interface Ethernet0/1
