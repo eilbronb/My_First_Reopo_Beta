@@ -15,9 +15,17 @@
       - name: print interfaces
         debug:
           msg: "{{ ansible_net_interfaces }}"
-      - name: Print Dict Item, interfaces and their MTU
+      - name: Print Dict Item, Print Loopback and their IP addresses
         debug:
           msg: "{{ item.key }} , {{ item.value.ipv4[0].address}}"
+
+          # .key is a name that refers to interface names. .value.ipv4 are also keys
+          # refere to a list inside a dictionary, the list itself has a single item [0] and its a dictionary, and you can call the "address" key
+          # inside that dictionary to call the IP address, here is the full dictionary for ansible_net_interfaces
+          # (item={'value': {u'macaddress': None, u'lineprotocol': u'up ', u'description': None, u'duplex': None, u'mediatype': None, u'mtu': 1514,
+          # u'operstatus': u'up', u'bandwidth': 8000000, u'ipv4': [{u'subnet': u'32', u'address': u'100.100.100.100'}], u'type': None},
+          # 'key': u'Loopback0'})
+
         when:
           - "'Loopback' in item.key"
         with_dict: "{{ ansible_net_interfaces }}"
