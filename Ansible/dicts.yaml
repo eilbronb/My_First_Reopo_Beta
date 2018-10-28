@@ -15,6 +15,6 @@
       - name: Print Dict Item, interfaces and their MTU
         debug:
           msg: "{{ item.key }} , {{ item.value.mtu}}"
+          when:
+            - "'Loopback1' in ansible_net_interface"
         with_dict: "{{ ansible_net_interfaces }}"
-        when:
-          - "'Loopback1' in ansible_net_interface"
